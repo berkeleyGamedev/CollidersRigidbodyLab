@@ -12,7 +12,7 @@ public class PlayerControllerTask1: MonoBehaviour {
 
 	Rigidbody2D playerRB;
 
-	//TASK 1
+	//TASK 1 (PAY ATTENTION)
 	bool canJump;
 
 
