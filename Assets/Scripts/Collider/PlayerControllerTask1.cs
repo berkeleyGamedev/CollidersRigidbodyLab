@@ -28,17 +28,17 @@ public class PlayerControllerTask1: MonoBehaviour {
 		movement = movement * Time.deltaTime;
 
 		playerRB.AddForce(movement);
-		if (playerRB.velocity.x > maxspeed) {
-			playerRB.velocity = new Vector2 (maxspeed, playerRB.velocity.y);
+		if (playerRB.linearVelocity.x > maxspeed) {
+			playerRB.linearVelocity = new Vector2 (maxspeed, playerRB.linearVelocity.y);
 		}
-		if (playerRB.velocity.x < -maxspeed) {
-			playerRB.velocity = new Vector2 (-maxspeed, playerRB.velocity.y);
+		if (playerRB.linearVelocity.x < -maxspeed) {
+			playerRB.linearVelocity = new Vector2 (-maxspeed, playerRB.linearVelocity.y);
 		}
 
 
 		//TASK 1: If someone pushes the space button and?
 		if (Input.GetKeyDown(KeyCode.Space)) {
-			playerRB.velocity = new Vector2 (playerRB.velocity.x, 0);
+			playerRB.linearVelocity = new Vector2 (playerRB.linearVelocity.x, 0);
 			playerRB.AddForce ( new Vector2(0, jumpforce));
 		}
 	}

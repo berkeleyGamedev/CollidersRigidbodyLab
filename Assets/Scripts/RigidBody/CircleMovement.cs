@@ -34,6 +34,6 @@ public class CircleMovement : MonoBehaviour {
 
     void moveFunction3() {
         Vector2 movementVector = new Vector2(xAxis, yAxis);
-        playerRigidbody.velocity = movementVector;
+        playerRigidbody.linearVelocity = movementVector;
     }
 }

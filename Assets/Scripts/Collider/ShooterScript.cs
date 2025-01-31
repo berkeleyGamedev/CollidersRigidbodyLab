@@ -33,7 +33,7 @@ public class ShooterScript : MonoBehaviour {
 
 					// Create the projectile and Access its Rigidbody to add force
 					GameObject newProjectile = (GameObject) Instantiate (projectile, transform.position, transform.rotation);
-					newProjectile.GetComponent<Rigidbody2D> ().velocity = FireDirection;
+					newProjectile.GetComponent<Rigidbody2D> ().linearVelocity = FireDirection;
 					//If the projectile exists after 5 seconds, destroy it
 					Destroy (newProjectile, 5);
 				}
